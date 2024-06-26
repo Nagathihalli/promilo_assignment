@@ -41,29 +41,23 @@ class _BottomNavState extends State<BottomNav> {
           )),
       body: indexPages[currentPageIndex],
       bottomNavigationBar: BottomNavigationBar(
+          elevation: 5,
           currentIndex: currentPageIndex,
           onTap: onTabTapped,
+          backgroundColor: Colors.grey,
+          // Set background color to grey
+          selectedItemColor: Colors.black,
+          // Set selected item color to black
+          unselectedItemColor: Colors.black,
           items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: "Home",
-                backgroundColor: Colors.black12),
+                icon: Icon(Icons.dashboard_outlined), label: "Prolet"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard_outlined),
-                label: "Prolet",
-                backgroundColor: Colors.black12),
+                icon: Icon(Icons.handshake), label: "Meetup"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.handshake),
-                label: "Meetup",
-                backgroundColor: Colors.black12),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.content_paste_search),
-                label: "Explore",
-                backgroundColor: Colors.black12),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: "Account",
-                backgroundColor: Colors.black12)
+                icon: Icon(Icons.content_paste_search), label: "Explore"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account")
           ]),
     );
   }
